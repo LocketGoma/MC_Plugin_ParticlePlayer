@@ -1,0 +1,14 @@
+name: ParticlePlayer
+main: particlePlayer.PlayerCore
+version: 0.1
+commands:
+  ppPlay:
+    description: play particle
+    usage: /<command>
+    permission: ParticlePlayer.ppPlay
+    permission-message : You don't have <permission>
+  ppStop:
+    description: stop particle
+    usage: /<command>
+    permission: ParticlePlayer.ppStop
+    permission-message : You don't have <permission>
