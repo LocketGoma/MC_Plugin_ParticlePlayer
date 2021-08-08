@@ -4,7 +4,7 @@ version: 0.1
 commands:
   ppPlay:
     description: play particle
-    usage: /<command>
+    usage: /<command> [Type] [Style]
     permission: ParticlePlayer.ppPlay
     permission-message : You don't have <permission>
   ppStop:

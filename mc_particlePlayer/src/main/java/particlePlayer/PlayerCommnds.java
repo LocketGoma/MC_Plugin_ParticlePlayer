@@ -23,9 +23,21 @@ public class PlayerCommnds implements CommandExecutor{
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		pRunner.SetPlayer((Player) sender);
 		if (cmd.getName().equalsIgnoreCase("ppPlay")) { // If the player typed /basic then do the following, note: If you only registered this executor for one command, you don't need this
-			// doSomething			
-			System.out.print("Play Particles");	
-			pRunner.SetPlayState(true);
+			// doSomething
+			System.out.print("Play Particles");
+			if (args.length == 2)
+			{
+				pRunner.SetPlayState(pRunner.SetParticleType(args[0]));
+				pRunner.SetParticleStyle(args[1]);				
+			}
+			else if (args.length == 0)
+			{								
+				pRunner.SetPlayState(true);			
+			}
+			else 
+			{
+				return false;
+			}
 			return true;
 		}
 		else if (cmd.getName().equalsIgnoreCase("ppStop"))
